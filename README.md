@@ -13,3 +13,5 @@ To run the build_setup.sh script,
 Additionals:
  - Ensure dependent files in source_files(my own folder name) like json, the python script, the config, the students' dataset is available for successful running and producing output
  - You can adjust attendance thresholds as needed by adjusting the numbers in the config file, but you'll then have to update the value in the printed display inorder not to confuse the user
+
+My video link guiding you is here:
