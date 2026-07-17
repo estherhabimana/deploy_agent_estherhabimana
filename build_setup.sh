@@ -4,6 +4,8 @@ set -u
 # setting up our structure directories and files
 function setup_directory() {
 	local dir="$1"
+	[ -w "." ] || { echo "ERROR: no write permission in $(pwd). Try checking permissions with 'ls -lad .'"; exit 1; }
+
 	echo "Setting up directory structure..."
 	mkdir -p "./$dir" "./$dir/Helpers" "./$dir/reports"
 	echo "Directory structure successfully setup!"
@@ -46,12 +48,11 @@ function handle_interruption() {
 	local dir="$1"
 	if [ -n "$dir" ] && [ -d "$dir" ]
 	then
-		echo
 		echo "Archiving $dir..."
 		tar -cf "${dir}_archive.tar" "./$dir"
 		echo "Cleaning workspace..."
 		rm -rf "./$dir"
-		echo "Setup successfully cancelled. Archived $dir and cleaned workspace"
+		echo "Setup successfully cancelled. Archived $dir and cleaned the workspace"
 	fi
 	exit
 }
