@@ -15,3 +15,5 @@ Additionals:
  - You can adjust attendance thresholds as needed by adjusting the numbers in the config file, but you'll then have to update the value in the printed display inorder not to confuse the user
 
  - To activate the archive feature, press ctrl+c right after giving the directory name /version name/number, before you confirm if you want to setup your own config warning and failure values
+
+My video link guiding you is here: https://youtu.be/uuWPELNlVTs
